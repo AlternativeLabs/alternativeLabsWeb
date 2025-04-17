@@ -1,11 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Box from "@mui/material/Box";
+import { Header } from "@/components/Header"
 
 export default function Home() {
   return (
-    <Box>
-      AlternativeLabs is alive
-    </Box>
+    <main>
+      <Header />
+      <div className="container mt-16 text-4xl font-bold">
+        AlternativeLabs is alive
+      </div>
+    </main>
   );
 }
