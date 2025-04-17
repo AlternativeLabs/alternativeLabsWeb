@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header"
+import { HomeSection } from "@/components/sections/Home";
 import {useTranslations} from 'next-intl';
 
 export default function Home() {
@@ -6,9 +7,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <div className="container mt-16 text-4xl font-bold">
-        {t('title')}
-      </div>
+      <HomeSection />
     </main>
   );
 }
