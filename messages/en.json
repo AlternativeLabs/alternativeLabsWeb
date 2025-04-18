@@ -1,5 +1,108 @@
 {
+    "Header": {
+      "home": "Home",
+      "services": "Services",
+      "whoWeAre": "Who We Are",
+      "contact": "Contact"
+    },
     "HomePage": {
-      "title": "Hello world!"
+      "title": "Scale Your Business with Advanced Technology",
+      "description": "Leverage cutting-edge AI, data-driven insights, and agentic technology to transform your ideas into production-ready solutions faster than ever.",
+      "button": "Get Started"
+    },
+    "ServicesPage": {
+      "title": "We're a Technology Solutions Provider and Innovation Hub",
+      "subtitle": "Innovation - Cloud - Blockchain - DevOps",
+      "description": "We build breakthrough products and provide expert consulting services across emerging technologies.",
+      "services": {
+        "rapidMvp": {
+          "title": "Rapid MVP",
+          "description": "Transform your ideas into working products quickly. We help you validate your concept and get to market faster with our agile development approach."
+        },
+        "automation": {
+          "title": "Automation",
+          "description": "Streamline your operations with intelligent automation solutions. We build custom workflows and integrate AI to reduce manual tasks and boost efficiency."
+        },
+        "blockchain": {
+          "title": "Blockchain",
+          "description": "Leverage the power of decentralized technology. We develop secure, scalable blockchain solutions for various use cases from DeFi to enterprise applications."
+        },
+        "innovationAi": {
+          "title": "Innovation & AI",
+          "description": "Stay ahead with cutting-edge AI solutions. We help businesses implement advanced machine learning and AI technologies to create intelligent, adaptive systems."
+        },
+        "learnMore": "Learn more"
+      }
+    },
+    "WhoWeArePage": {
+      "title": "Pioneering the Future of Technology",
+      "description": {
+        "main": "We are a multidisciplinary team of innovators, developers, and visionaries from across Latin America, united by our passion for breakthrough technology and exceptional software development.",
+        "locations": "Based in Ecuador, Brazil, and Costa Rica, we bring together diverse perspectives and expertise to create solutions that push the boundaries of what's possible with emerging technologies like StarkNet, blockchain, and artificial intelligence.",
+        "cta": "Join us in building the next generation of transformative digital solutions."
+      },
+      "highlights": {
+        "globalTalent": {
+          "title": "Global Talent",
+          "description": "A diverse team spanning Ecuador, Brazil, and Costa Rica, bringing unique perspectives to every project."
+        },
+        "cuttingEdgeStack": {
+          "title": "Cutting-Edge Stack",
+          "description": "Leveraging StarkNet, AI, and blockchain technology to build the next generation of decentralized applications."
+        },
+        "innovationFocus": {
+          "title": "Innovation Focus",
+          "description": "Dedicated to pushing boundaries in blockchain, AI, and cloud computing to solve real-world challenges."
+        }
+      }
+    },
+    "ContactPage": {
+      "title": "Get in Touch",
+      "description": "Ready to start your next project? We'd love to hear from you.",
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name",
+          "error": "Name must be at least 2 characters."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com",
+          "error": "Please enter a valid email address."
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "What's this about?",
+          "error": "Subject must be at least 5 characters."
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about your project...",
+          "error": "Message must be at least 10 characters."
+        },
+        "submit": {
+          "sending": "Sending...",
+          "default": "Send Message"
+        },
+        "toast": {
+          "success": {
+            "title": "Success!",
+            "description": "Your message has been sent. We'll get back to you soon."
+          },
+          "error": {
+            "title": "Error",
+            "description": "Failed to send message. Please try again later."
+          }
+        }
+      }
+    },
+    "Footer": {
+      "builtBy": "Built by",
+      "inEcuador": "in Ecuador",
+      "allRightsReserved": "All rights reserved",
+      "socialLinks": {
+        "github": "GitHub",
+        "twitter": "Twitter"
+      }
     }
   }

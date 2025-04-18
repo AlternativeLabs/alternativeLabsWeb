@@ -2,12 +2,15 @@ import Link from "next/link"
 import { LanguageSelector } from "./LanguageSelector"
 import { ModeToggle } from "./modeToggle"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 
 interface HeaderProps {
   className?: string
 }
 
 export function Header({ className }: HeaderProps) {
+  const t = useTranslations("Header");
+
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
@@ -30,25 +33,25 @@ export function Header({ className }: HeaderProps) {
             href="/" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Home
+            {t("home")}
           </Link>
           <Link 
-            href="/services" 
+            href="#services" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Services
+            {t("services")}
           </Link>
           <Link 
-            href="/about" 
+            href="#who-we-are" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Who We Are
+            {t("whoWeAre")}
           </Link>
           <Link 
             href="/contact" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Contact
+            {t("contact")}
           </Link>
         </nav>
 
