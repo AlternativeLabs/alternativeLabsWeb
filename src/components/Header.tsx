@@ -39,7 +39,7 @@ export function Header({ className }: HeaderProps) {
             Services
           </Link>
           <Link 
-            href="/about" 
+            href="#who-we-are" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Who We Are
