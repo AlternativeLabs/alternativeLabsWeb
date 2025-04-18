@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header"
 import { HomeSection } from "@/components/sections/Home";
+import { ServicesSection } from "@/components/sections/Services";
 import {useTranslations} from 'next-intl';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <main>
       <Header />
       <HomeSection />
+      <ServicesSection />
     </main>
   );
 }

@@ -88,7 +88,7 @@ export function HomeSection() {
             className="relative h-[400px] w-full rounded-lg overflow-hidden"
           >
             <Image
-              src="/ai-business.jpg"
+              src="/landing_image.png"
               alt="AI Business Technology"
               fill
               className="object-cover"

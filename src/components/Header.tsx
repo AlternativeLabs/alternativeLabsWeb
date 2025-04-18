@@ -33,7 +33,7 @@ export function Header({ className }: HeaderProps) {
             Home
           </Link>
           <Link 
-            href="/services" 
+            href="#services" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Services
