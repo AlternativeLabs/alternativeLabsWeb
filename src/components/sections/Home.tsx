@@ -11,7 +11,11 @@ import Typescript from "../../../public/typescript.svg";
 import Nextjs from "../../../public/nextjs.svg";
 import Machinelearning from "../../../public/machinelearning.svg";
 import Cloudnative from "../../../public/cloudnative.svg";
+import { useTranslations } from "next-intl";
+
 export function HomeSection() {
+  const t = useTranslations("HomePage");
+
   const technologies = [
     {
       name: "N8N",
@@ -68,15 +72,13 @@ export function HomeSection() {
             className="space-y-6"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Scale Your Business with Advanced Technology
+              {t("title")}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Leverage cutting-edge AI, data-driven insights, and agentic
-              technology to transform your ideas into production-ready solutions
-              faster than ever.
+              {t("description")}
             </p>
             <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-              Get Started
+              {t("button")}
             </button>
           </motion.div>
 

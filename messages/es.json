@@ -1,5 +1,108 @@
 {
+    "Header": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "whoWeAre": "Quiénes Somos",
+      "contact": "Contacto"
+    },
     "HomePage": {
-      "title": "¡Hola mundo!"
+      "title": "Escala tu Negocio con Tecnología Avanzada",
+      "description": "Aprovecha la IA de vanguardia, los insights basados en datos y la tecnología agéntica para transformar tus ideas en soluciones listas para producción más rápido que nunca.",
+      "button": "Comenzar"
+    },
+    "ServicesPage": {
+      "title": "Somos un Proveedor de Soluciones Tecnológicas y Centro de Innovación",
+      "subtitle": "Innovación - Cloud - Blockchain - DevOps",
+      "description": "Construimos productos innovadores y proporcionamos servicios de consultoría experta en tecnologías emergentes.",
+      "services": {
+        "rapidMvp": {
+          "title": "MVP Rápido",
+          "description": "Transforma tus ideas en productos funcionales rápidamente. Te ayudamos a validar tu concepto y llegar al mercado más rápido con nuestro enfoque de desarrollo ágil."
+        },
+        "automation": {
+          "title": "Automatización",
+          "description": "Optimiza tus operaciones con soluciones de automatización inteligente. Construimos flujos de trabajo personalizados e integramos IA para reducir tareas manuales y aumentar la eficiencia."
+        },
+        "blockchain": {
+          "title": "Blockchain",
+          "description": "Aprovecha el poder de la tecnología descentralizada. Desarrollamos soluciones blockchain seguras y escalables para diversos casos de uso, desde DeFi hasta aplicaciones empresariales."
+        },
+        "innovationAi": {
+          "title": "Innovación e IA",
+          "description": "Mantente a la vanguardia con soluciones de IA de última generación. Ayudamos a las empresas a implementar tecnologías avanzadas de machine learning e IA para crear sistemas inteligentes y adaptativos."
+        },
+        "learnMore": "Saber más"
+      }
+    },
+    "WhoWeArePage": {
+      "title": "Pioneros en el Futuro de la Tecnología",
+      "description": {
+        "main": "Somos un equipo multidisciplinario de innovadores, desarrolladores y visionarios de toda América Latina, unidos por nuestra pasión por la tecnología revolucionaria y el desarrollo de software excepcional.",
+        "locations": "Con base en Ecuador, Brasil y Costa Rica, reunimos diversas perspectivas y experiencia para crear soluciones que empujan los límites de lo posible con tecnologías emergentes como StarkNet, blockchain e inteligencia artificial.",
+        "cta": "Únete a nosotros en la construcción de la próxima generación de soluciones digitales transformadoras."
+      },
+      "highlights": {
+        "globalTalent": {
+          "title": "Talento Global",
+          "description": "Un equipo diverso que abarca Ecuador, Brasil y Costa Rica, aportando perspectivas únicas a cada proyecto."
+        },
+        "cuttingEdgeStack": {
+          "title": "Tecnología de Vanguardia",
+          "description": "Aprovechando StarkNet, IA y tecnología blockchain para construir la próxima generación de aplicaciones descentralizadas."
+        },
+        "innovationFocus": {
+          "title": "Enfoque en Innovación",
+          "description": "Dedicados a expandir los límites en blockchain, IA y computación en la nube para resolver desafíos del mundo real."
+        }
+      }
+    },
+    "ContactPage": {
+      "title": "Contáctanos",
+      "description": "¿Listo para comenzar tu próximo proyecto? Nos encantaría escucharte.",
+      "form": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Tu nombre",
+          "error": "El nombre debe tener al menos 2 caracteres."
+        },
+        "email": {
+          "label": "Correo",
+          "placeholder": "tu@correo.com",
+          "error": "Por favor, ingresa una dirección de correo válida."
+        },
+        "subject": {
+          "label": "Asunto",
+          "placeholder": "¿De qué se trata?",
+          "error": "El asunto debe tener al menos 5 caracteres."
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Cuéntanos sobre tu proyecto...",
+          "error": "El mensaje debe tener al menos 10 caracteres."
+        },
+        "submit": {
+          "sending": "Enviando...",
+          "default": "Enviar Mensaje"
+        },
+        "toast": {
+          "success": {
+            "title": "¡Éxito!",
+            "description": "Tu mensaje ha sido enviado. Te responderemos pronto."
+          },
+          "error": {
+            "title": "Error",
+            "description": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+          }
+        }
+      }
+    },
+    "Footer": {
+      "builtBy": "Desarrollado por",
+      "inEcuador": "en Ecuador",
+      "allRightsReserved": "Todos los derechos reservados",
+      "socialLinks": {
+        "github": "GitHub",
+        "twitter": "Twitter"
+      }
     }
   }

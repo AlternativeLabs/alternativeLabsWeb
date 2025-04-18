@@ -1,10 +1,13 @@
 import { Card } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 export function WhoWeAreSection() {
+  const t = useTranslations("WhoWeArePage");
+
   const teamHighlights = [
     {
-      title: "Global Talent",
-      description: "A diverse team spanning Ecuador, Brazil, and Costa Rica, bringing unique perspectives to every project.",
+      title: t("highlights.globalTalent.title"),
+      description: t("highlights.globalTalent.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +26,8 @@ export function WhoWeAreSection() {
       ),
     },
     {
-      title: "Cutting-Edge Stack",
-      description: "Leveraging StarkNet, AI, and blockchain technology to build the next generation of decentralized applications.",
+      title: t("highlights.cuttingEdgeStack.title"),
+      description: t("highlights.cuttingEdgeStack.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +46,8 @@ export function WhoWeAreSection() {
       ),
     },
     {
-      title: "Innovation Focus",
-      description: "Dedicated to pushing boundaries in blockchain, AI, and cloud computing to solve real-world challenges.",
+      title: t("highlights.innovationFocus.title"),
+      description: t("highlights.innovationFocus.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,17 +74,17 @@ export function WhoWeAreSection() {
           {/* Text Content */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Pioneering the Future of Technology
+              {t("title")}
             </h2>
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground">
-                We are a multidisciplinary team of innovators, developers, and visionaries from across Latin America, united by our passion for breakthrough technology and exceptional software development.
+                {t("description.main")}
               </p>
               <p className="text-lg text-muted-foreground">
-                Based in Ecuador, Brazil, and Costa Rica, we bring together diverse perspectives and expertise to create solutions that push the boundaries of what&apos;s possible with emerging technologies like StarkNet, blockchain, and artificial intelligence.
+                {t("description.locations")}
               </p>
               <p className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                Join us in building the next generation of transformative digital solutions.
+                {t("description.cta")}
               </p>
             </div>
           </div>

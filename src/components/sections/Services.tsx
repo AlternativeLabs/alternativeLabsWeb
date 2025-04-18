@@ -1,10 +1,13 @@
 import { Card } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 export function ServicesSection() {
+  const t = useTranslations("ServicesPage");
+
   const services = [
     {
-      title: "Rapid MVP",
-      description: "Transform your ideas into working products quickly. We help you validate your concept and get to market faster with our agile development approach.",
+      title: t("services.rapidMvp.title"),
+      description: t("services.rapidMvp.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +26,8 @@ export function ServicesSection() {
       ),
     },
     {
-      title: "Automation",
-      description: "Streamline your operations with intelligent automation solutions. We build custom workflows and integrate AI to reduce manual tasks and boost efficiency.",
+      title: t("services.automation.title"),
+      description: t("services.automation.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +46,8 @@ export function ServicesSection() {
       ),
     },
     {
-      title: "Blockchain",
-      description: "Leverage the power of decentralized technology. We develop secure, scalable blockchain solutions for various use cases from DeFi to enterprise applications.",
+      title: t("services.blockchain.title"),
+      description: t("services.blockchain.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +66,8 @@ export function ServicesSection() {
       ),
     },
     {
-      title: "Innovation & AI",
-      description: "Stay ahead with cutting-edge AI solutions. We help businesses implement advanced machine learning and AI technologies to create intelligent, adaptive systems.",
+      title: t("services.innovationAi.title"),
+      description: t("services.innovationAi.description"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -90,13 +93,13 @@ export function ServicesSection() {
         {/* Title Section */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">
-            We&apos;re a Technology Solutions Provider and Innovation Hub
+            {t("title")}
           </h2>
           <p className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-            Innovation - Cloud - Blockchain - DevOps
+            {t("subtitle")}
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We build breakthrough products and provide expert consulting services across emerging technologies.
+            {t("description")}
           </p>
         </div>
 
@@ -118,7 +121,7 @@ export function ServicesSection() {
                   {service.description}
                 </p>
                 <div className="flex items-center text-primary">
-                  <span className="text-sm font-medium">Learn more</span>
+                  <span className="text-sm font-medium">{t("services.learnMore")}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"

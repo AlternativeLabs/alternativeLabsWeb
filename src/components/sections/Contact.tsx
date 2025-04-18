@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import emailjs from '@emailjs/browser';
+import { useTranslations } from "next-intl";
 import {
   Form,
   FormControl,
@@ -18,30 +19,31 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
-});
-
-if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
-    !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 
-    !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
-  throw new Error('EmailJS environment variables are not properly configured');
-}
-
 export function ContactSection() {
+  const t = useTranslations("ContactPage");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  const formSchema = z.object({
+    name: z.string().min(2, {
+      message: t("form.name.error"),
+    }),
+    email: z.string().email({
+      message: t("form.email.error"),
+    }),
+    subject: z.string().min(5, {
+      message: t("form.subject.error"),
+    }),
+    message: z.string().min(10, {
+      message: t("form.message.error"),
+    }),
+  });
+
+  if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
+      !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 
+      !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+    throw new Error('EmailJS environment variables are not properly configured');
+  }
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,15 +73,15 @@ export function ContactSection() {
       );
 
       toast({
-        title: "Success!",
-        description: "Your message has been sent. We'll get back to you soon.",
+        title: t("form.toast.success.title"),
+        description: t("form.toast.success.description"),
       });
       form.reset();
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
+        title: t("form.toast.error.title"),
+        description: t("form.toast.error.description"),
         variant: "destructive",
       });
     } finally {
@@ -92,10 +94,10 @@ export function ContactSection() {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Get in Touch
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Ready to start your next project? We&apos;d love to hear from you.
+            {t("description")}
           </p>
         </div>
 
@@ -109,9 +111,9 @@ export function ContactSection() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>{t("form.name.label")}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder={t("form.name.placeholder")} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -122,9 +124,9 @@ export function ContactSection() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>{t("form.email.label")}</FormLabel>
                         <FormControl>
-                          <Input placeholder="your@email.com" {...field} />
+                          <Input placeholder={t("form.email.placeholder")} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -137,9 +139,9 @@ export function ContactSection() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Subject</FormLabel>
+                      <FormLabel>{t("form.subject.label")}</FormLabel>
                       <FormControl>
-                        <Input placeholder="What's this about?" {...field} />
+                        <Input placeholder={t("form.subject.placeholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -151,10 +153,10 @@ export function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>{t("form.message.label")}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your project..."
+                          placeholder={t("form.message.placeholder")}
                           className="min-h-[150px]"
                           {...field}
                         />
@@ -165,7 +167,7 @@ export function ContactSection() {
                 />
 
                 <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? "Sending..." : "Send Message"}
+                  {isLoading ? t("form.submit.sending") : t("form.submit.default")}
                 </Button>
               </form>
             </Form>
