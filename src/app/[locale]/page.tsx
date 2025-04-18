@@ -3,6 +3,7 @@ import { ContactSection } from "@/components/sections/Contact";
 import { HomeSection } from "@/components/sections/Home";
 import { ServicesSection } from "@/components/sections/Services";
 import { WhoWeAreSection } from "@/components/sections/WhoWeAre";
+import { Footer } from "@/components/sections/Footer";
 import {useTranslations} from 'next-intl';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <WhoWeAreSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }
